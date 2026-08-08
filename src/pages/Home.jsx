@@ -42,9 +42,9 @@ const Home = () => {
       category: 'Hospital',
       description: 'A healthcare platform built to help patients find the right medical support and services faster.',
       tech: ['Healthcare', 'Web Design', 'Responsive UI'],
-      image: '/projects/laptopView/Screenshot 2026-05-16 005129.png',
+      image: '/image-1786217254359.png',
       featured: true,
-      siteUrl: 'https://medray.vercel.app/',
+      siteUrl: 'https://medray.com',
       homeOnly: true,
     },
     {
@@ -283,11 +283,11 @@ const Home = () => {
                   className="group"
                 >
                   <div className="relative overflow-hidden rounded-3xl border border-white/10 hover:border-blue-500/30 transition-all">
-                    <div className="aspect-video overflow-hidden">
+                    <div className="aspect-video overflow-hidden bg-slate-800">
                       <img 
                         src={project.image} 
                         alt={project.title} 
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
                     <div className="p-8">
