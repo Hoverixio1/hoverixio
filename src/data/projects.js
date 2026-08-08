@@ -26,7 +26,7 @@ export const projects = [
     features: ["Product catalog", "Shopping cart", "Secure payments", "Inventory management"],
     image: "/image-1786216869405.png",
     gallery: [
-      "/image-1786216869405.png",
+      "/image-1786217254359.png",
       "/projects/laptopView/Screenshot 2026-05-16 005319.png",
     ],
     client: "GRT Jewellers",
