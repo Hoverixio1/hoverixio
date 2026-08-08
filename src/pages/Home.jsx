@@ -44,7 +44,7 @@ const Home = () => {
       tech: ['Healthcare', 'Web Design', 'Responsive UI'],
       image: '/image-1786217254359.png',
       featured: true,
-      siteUrl: 'https://medray.com',
+      siteUrl: 'https://medray.vercel.app/',
       homeOnly: true,
     },
     {

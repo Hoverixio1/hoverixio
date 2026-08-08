@@ -32,7 +32,7 @@ export const projects = [
     client: "GRT Jewellers",
     year: "2024",
     featured: true,
-    siteUrl: "https://srilakshmi.com",
+    siteUrl: "https://aura-theta-virid.vercel.app/",
   },
   {
     id: 3,
