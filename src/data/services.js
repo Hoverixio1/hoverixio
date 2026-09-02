@@ -1,7 +1,7 @@
 const SERVICE_PRICES = {
   'Website Development':        { IN: 19999,  DE: 999,  US: 1099, AE: 3999,  MY: 4999,  SG: 1499, period: '' },
   'Web Application Development':{ IN: 99999,  DE: 4999, US: 5499, AE: 19999, MY: 24999, SG: 7499, period: '' },
-  'Mobile App Development':     { IN: 299999, DE: 14999,US: 16499,AE: 59999, MY: 74999, SG: 22499,period: '' },
+  'Mobile App Development':     { IN: 149999, DE: 14999,US: 16499,AE: 59999, MY: 74999, SG: 22499,period: '' },
   'UI/UX Design':               { IN: 29999,  DE: 1499, US: 1649, AE: 5999,  MY: 7499,  SG: 2249, period: '' },
   'MERN Stack Development':     { IN: 149999, DE: 7499, US: 8249, AE: 29999, MY: 37499, SG: 11249,period: '' },
   'E-commerce Development':     { IN: 149999, DE: 7499, US: 8249, AE: 29999, MY: 37499, SG: 11249,period: '' },

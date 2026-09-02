@@ -47,7 +47,7 @@ export const pricingPlans = [
     description: "For businesses that demand the best - Big Savings Included!",
     badge: "⭐ Premium",
     features: [
-      "✅ Unlimited Pages",
+      "✅ 15 Pages Website",
       "✅ Custom Design",
       "✅ Advanced SEO",
       "✅ E-commerce Ready",
