@@ -41,7 +41,7 @@ const Navbar = () => {
       name: 'Company',
       path: '#',
       dropdown: [
-        { name: 'Home (index-v2)', href: '/index-v2.html' },
+        { name: 'Home (saas-applications)', href: '/saas-applications.html' },
         { name: 'Terms and Conditions', href: '/terms-and-conditions.html' },
         { name: 'Privacy Policy', href: '/privacy-policy.html' },
       ],

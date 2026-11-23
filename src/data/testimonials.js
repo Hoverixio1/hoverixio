@@ -27,7 +27,7 @@ export const testimonials = [
     id: 4,
     name: "Abhijeet",
     role: "Startup Founder",
-    image: "/projects/people/Abhijeet.jpeg",
+    image: "",
     review: "Great service! They helped me get my business online and even guided me with Google Ads. My sales increased!",
     rating: 5,
   },
