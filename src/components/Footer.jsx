@@ -32,8 +32,8 @@ const Footer = () => {
   ];
 
   const legalLinks = [
-    { name: 'Privacy Policy', path: '/privacy-policy' },
-    { name: 'Terms & Conditions', path: '/terms-conditions' },
+    { name: 'Privacy Policy', href: '/privacy-policy.html' },
+    { name: 'Terms & Conditions', href: '/terms-and-conditions.html' },
     { name: 'FAQ', path: '/faq' },
     // { name: 'Careers', path: '/careers' },
   ];
@@ -133,9 +133,15 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-6">
             {legalLinks.map((link) => (
-              <Link key={link.name} to={link.path} className="text-slate-500 hover:text-slate-300 text-sm transition-colors">
-                {link.name}
-              </Link>
+              link.href ? (
+                <a key={link.name} href={link.href} className="text-slate-500 hover:text-slate-300 text-sm transition-colors">
+                  {link.name}
+                </a>
+              ) : (
+                <Link key={link.name} to={link.path} className="text-slate-500 hover:text-slate-300 text-sm transition-colors">
+                  {link.name}
+                </Link>
+              )
             ))}
           </div>
         </div>

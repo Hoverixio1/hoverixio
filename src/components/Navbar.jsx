@@ -37,6 +37,15 @@ const Navbar = () => {
     { name: 'Pricing', path: '/pricing' },
     { name: 'Blog', path: '/blog' },
     { name: 'Academy', path: '/academy' },
+    {
+      name: 'Company',
+      path: '#',
+      dropdown: [
+        { name: 'Home (index-v2)', href: '/index-v2.html' },
+        { name: 'Terms and Conditions', href: '/terms-and-conditions.html' },
+        { name: 'Privacy Policy', href: '/privacy-policy.html' },
+      ],
+    },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -55,12 +64,20 @@ const Navbar = () => {
             <div key={item.name} className="relative group">
               {item.dropdown ? (
                 <div 
-                  className="flex items-center gap-1 text-sm font-medium text-slate-300 hover:text-white transition-colors cursor-pointer"
+                  className="relative"
                   onMouseEnter={() => setActiveDropdown(item.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
-                  {item.name}
-                  <ChevronRight className="w-4 h-4 transition-transform group-hover:rotate-90" />
+                  <button
+                    type="button"
+                    className="flex items-center gap-1 text-sm font-medium text-slate-300 hover:text-white transition-colors"
+                    aria-haspopup="true"
+                    aria-expanded={activeDropdown === item.name}
+                    onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                  >
+                    {item.name}
+                    <ChevronRight className={cn("w-4 h-4 transition-transform group-hover:rotate-90", activeDropdown === item.name && "rotate-90")} />
+                  </button>
                   
                   <div 
                     className={cn(
@@ -68,7 +85,16 @@ const Navbar = () => {
                       activeDropdown === item.name ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
                     )}
                   >
-                    {item.dropdown.map((dropdownItem) => (
+                    {item.dropdown.map((dropdownItem) => dropdownItem.href ? (
+                      <a
+                        key={dropdownItem.name}
+                        href={dropdownItem.href}
+                        className="block px-6 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition-colors"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        {dropdownItem.name}
+                      </a>
+                    ) : (
                       <Link 
                         key={dropdownItem.name}
                         to={dropdownItem.path}
@@ -131,7 +157,16 @@ const Navbar = () => {
                     </button>
                     {activeDropdown === item.name && (
                       <div className="pl-4 space-y-1 mb-2">
-                        {item.dropdown.map((dropdownItem) => (
+                        {item.dropdown.map((dropdownItem) => dropdownItem.href ? (
+                          <a
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className="block py-2 text-sm text-slate-400 hover:text-white transition-colors"
+                            onClick={() => { setIsOpen(false); setActiveDropdown(null); }}
+                          >
+                            {dropdownItem.name}
+                          </a>
+                        ) : (
                           <Link 
                             key={dropdownItem.name}
                             to={dropdownItem.path}
